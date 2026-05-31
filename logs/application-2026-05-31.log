@@ -1,0 +1,25 @@
+{"level":"info","message":"server is running at 9000","timestamp":"05-31-2026 13:35:16","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"05-31-2026 13:35:16","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"Validating request body","timestamp":"05-31-2026 13:35:25","correlationId":"a1af0050-d499-48e1-8d54-72104c96cc16","data":{}}
+{"level":"info","message":"Request body is valid","timestamp":"05-31-2026 13:35:25","correlationId":"a1af0050-d499-48e1-8d54-72104c96cc16","data":{}}
+{"level":"info","message":"Received ping request","timestamp":"05-31-2026 13:35:25","correlationId":"a1af0050-d499-48e1-8d54-72104c96cc16","data":{}}
+{"level":"info","message":"server is running at 9000","timestamp":"05-31-2026 13:35:28","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"05-31-2026 13:35:28","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 9000","timestamp":"05-31-2026 13:36:25","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"05-31-2026 13:36:25","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 9000","timestamp":"05-31-2026 13:38:17","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"05-31-2026 13:38:17","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 9000","timestamp":"05-31-2026 13:38:24","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"05-31-2026 13:38:24","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 9000","timestamp":"05-31-2026 13:38:28","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"05-31-2026 13:38:28","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 9000","timestamp":"05-31-2026 13:38:29","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"05-31-2026 13:38:29","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 9000","timestamp":"05-31-2026 13:38:35","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"05-31-2026 13:38:35","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 9000","timestamp":"05-31-2026 13:38:40","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"05-31-2026 13:38:40","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 9000","timestamp":"05-31-2026 13:38:48","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"05-31-2026 13:38:48","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 9000","timestamp":"05-31-2026 13:39:00","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"05-31-2026 13:39:00","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
