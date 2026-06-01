@@ -1,0 +1,6 @@
+{"level":"info","message":"server is running at 3000","timestamp":"05-31-2026 15:17:46","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"05-31-2026 15:17:46","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"Validating request body","timestamp":"05-31-2026 15:18:23","correlationId":"858a32b3-d285-4c4a-a5b8-51ea59b70cb9","data":{}}
+{"level":"error","message":"Request body is invalid","timestamp":"05-31-2026 15:18:23","correlationId":"858a32b3-d285-4c4a-a5b8-51ea59b70cb9","data":{}}
+{"level":"info","message":"server is running at 3000","timestamp":"05-31-2026 15:23:19","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"05-31-2026 15:23:19","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}

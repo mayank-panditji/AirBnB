@@ -1,0 +1,2 @@
+{"level":"info","message":"server is running at 3000","timestamp":"06-01-2026 07:58:34","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-01-2026 07:58:34","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
