@@ -17,9 +17,18 @@ export async function createHotel(hotelData: createHotelDTO){
 export async function getHotelById(id: number){
     const hotel = await Hotel.findByPk(id);
     if(!hotel){
-        logger.warn(`Hotel with id ${id} not found`);
+        logger.error(`Hotel with id ${id} not found`);
         throw new NotFoundError(`Hotel with id ${id} not found`);
     }
     logger.info(`Hotel with id ${id} retrieved successfully`,{data:hotel});
     return hotel;
+}
+export async function getAllHotels(){
+    const hotels = await Hotel.findAll();
+   if(!hotels){
+    logger.error(`No hotels found`);
+    throw new NotFoundError(`No hotels found`);
+   }
+   logger.info(`All hotels retrieved successfully`,{data:hotels});
+   return hotels;
 }
