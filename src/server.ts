@@ -7,6 +7,8 @@ import z from "zod";
 import logger from "./config/logger";
 import { genericErrorHandler } from "./middleware/error.middleware";
 import { attachCorrelationIdMiddleware } from "./middleware/correlation.middleware";
+import Hotel from "./db/models/hotel";
+import sequelize from "./db/models/sequelize";
 const app = express();
 app.use(express.json())
 
@@ -19,8 +21,9 @@ app.use('/api/v2',v2Router)
 
 app.use(genericErrorHandler)
 
-app.listen(serverConfig.PORT , () => {
+app.listen(serverConfig.PORT , async () => {
   logger.info(`server is running at ${serverConfig.PORT}`);
-  console.log("hello");
   logger.info("Server started successfully",{data:"some additional data"});
+   await sequelize.authenticate();
+          logger.info("Database connection established successfully");
 });
