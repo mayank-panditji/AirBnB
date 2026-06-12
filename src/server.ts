@@ -10,6 +10,7 @@ import { attachCorrelationIdMiddleware } from "./middleware/correlation.middlewa
 import { setUpMailerWorker } from "./processor/email.processor";
 import { NotificationDto } from "./dto/notification.dto";
 import { addEmailtoQueue } from "./producer/email.producer";
+import { renderMailTemplate } from "./templates/templates.handler";
 const app = express();
 app.use(express.json())
 
@@ -22,20 +23,20 @@ app.use('/api/v2',v2Router)
 
 app.use(genericErrorHandler)
 
-app.listen(serverConfig.PORT , () => {
+app.listen(serverConfig.PORT , async() => {
   logger.info(`server is running at ${serverConfig.PORT}`);
   console.log("hello");
   setUpMailerWorker();
   logger.info(`mailer worker setup completed`)
   logger.info("Server started successfully",{data:"some additional data"});
-  const smapleNotification:NotificationDto={
-    to:"sample",
-    subject:"Sample email",
-    templateid:"sample-tempplate",
+  addEmailtoQueue({
+    to:"trivedim115@gmail.com",
+    subject:"test email",
+    templateid:"welcome",
     params:{
       name:"Mayank Trivedi",
-      orederId:"12345"
+     appname:"booking app"
     }
-  }
-  addEmailtoQueue(smapleNotification)
+  })
+  
 });
