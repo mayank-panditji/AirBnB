@@ -1,0 +1,75 @@
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:22:06","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:22:06","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:22:06","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:23:55","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:23:55","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:23:55","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:24:00","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:24:00","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:24:00","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:24:06","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:24:06","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:24:06","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:36:51","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:36:51","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:36:51","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:42:28","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:42:28","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:42:28","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:42:56","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:42:56","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:42:56","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:44:40","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:44:40","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:44:40","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:44:44","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:44:44","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:44:44","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:44:46","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:44:46","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:44:46","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:44:47","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:44:47","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:44:47","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:44:52","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:44:52","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:44:52","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:45:04","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:45:04","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:45:04","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:45:25","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:45:25","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:45:25","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:46:19","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:46:19","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:46:19","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:46:20","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:46:20","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:46:20","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:46:26","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:46:26","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:46:26","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:46:35","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:46:35","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:46:35","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:46:37","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:46:37","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:46:37","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:46:38","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:46:38","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:46:38","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:46:41","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:46:41","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:46:41","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:46:47","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:46:47","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:46:47","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:46:50","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:46:50","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:46:50","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:46:54","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:46:54","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:46:54","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}
+{"level":"info","message":"server is running at 3002","timestamp":"06-12-2026 07:47:05","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"mailer worker setup completed","timestamp":"06-12-2026 07:47:05","correlationId":"unknown error while creating correlation id","data":{}}
+{"level":"info","message":"Server started successfully","timestamp":"06-12-2026 07:47:05","correlationId":"unknown error while creating correlation id","data":{"data":"some additional data"}}

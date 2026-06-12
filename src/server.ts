@@ -7,6 +7,9 @@ import z from "zod";
 import logger from "./config/logger";
 import { genericErrorHandler } from "./middleware/error.middleware";
 import { attachCorrelationIdMiddleware } from "./middleware/correlation.middleware";
+import { setUpMailerWorker } from "./processor/email.processor";
+import { NotificationDto } from "./dto/notification.dto";
+import { addEmailtoQueue } from "./producer/email.producer";
 const app = express();
 app.use(express.json())
 
@@ -22,5 +25,17 @@ app.use(genericErrorHandler)
 app.listen(serverConfig.PORT , () => {
   logger.info(`server is running at ${serverConfig.PORT}`);
   console.log("hello");
+  setUpMailerWorker();
+  logger.info(`mailer worker setup completed`)
   logger.info("Server started successfully",{data:"some additional data"});
+  const smapleNotification:NotificationDto={
+    to:"sample",
+    subject:"Sample email",
+    templateid:"sample-tempplate",
+    params:{
+      name:"Mayank Trivedi",
+      orederId:"12345"
+    }
+  }
+  addEmailtoQueue(smapleNotification)
 });
