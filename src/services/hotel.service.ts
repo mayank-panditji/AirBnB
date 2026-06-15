@@ -1,18 +1,26 @@
-import { createHotel, getHotelById,getAllHotels } from "../repositary/hotel.repositry";
 import { createHotelDTO } from "../dtos/hotel.dto";
-import { BadRequestError } from "../utils/errors/app.error";
+import { HotelRepository } from "../repositary/hotel.repositry";
 
 
-export async function createHotelService(hotelData: createHotelDTO){
-  
-    const hotel = await createHotel(hotelData);
+const hotelRepository = new HotelRepository();
+
+
+export async function createHotelService(hotelData: createHotelDTO) {
+    const hotel = await hotelRepository.create(hotelData);
     return hotel;
 }
-export async function getHotelByIdService(id: number){
-    const hotel = await getHotelById(id);
+
+export async function getHotelByIdService(id: number) {
+    const hotel = await hotelRepository.findById(id);
     return hotel;
 }
-export async function getAllHotelsService(){
-    const hotels = await getAllHotels();
+
+export async function getAllHotelsService() {
+    const hotels = await hotelRepository.findAll();
     return hotels;
+}
+
+export async function deleteHotelService(id: number) {
+    const response = await hotelRepository.softDelete(id);
+    return response;
 }
