@@ -15,4 +15,6 @@ func NewUserRouter(_userController *controllers.UserController) Router{
 }
 func (ur *UserRouter) Register(r chi.Router){
 	r.Get("/profile",ur.UserController.GetUserByID)
+	r.Get("/users",ur.UserController.GetAllUsers)
+	r.Delete("/users/{id}",ur.UserController.DeleteUserById)
 }
