@@ -2,7 +2,8 @@ package router
 
 import (
 	"Authingo/controllers"
-
+	"Authingo/dto"
+	"Authingo/middlewares"
 	"github.com/go-chi/chi/v5"
 )
 type UserRouter struct {
@@ -15,9 +16,10 @@ func NewUserRouter(_userController *controllers.UserController) Router{
 }
 func (ur *UserRouter) Register(r chi.Router){
 	
-	r.Get("/profile",ur.UserController.GetUserByID)
+	r.With(middlewares.JWTAuthMiddleware).Get("/users/{id}",ur.UserController.GetUserByID)
 	r.Get("/users",ur.UserController.GetAllUsers)
 	r.Delete("/users/{id}",ur.UserController.DeleteUserById)
-	r.Post("/signup",ur.UserController.CreateUser)
-	r.Post("/login",ur.UserController.LoginUser)
+	
+	r.Post("/signup", middlewares.ValidateBody[dto.SignupRequestDTO](ur.UserController.CreateUser))
+	r.Post("/login", middlewares.ValidateBody[dto.LoginRequestDTO](ur.UserController.LoginUser))
 }

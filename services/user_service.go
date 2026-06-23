@@ -10,10 +10,10 @@ import (
 	"github.com/golang-jwt/jwt/v4"
 )
 type UserService interface {
-	GetUserByID() error
+	GetUserByID(id int64) (*models.User,error)
 	GetAllUsers() ([]*models.User,error)
 	DeleteUserById(id int64) error
-	CreateUser() error
+	CreateUser(payload *dto.SignupRequestDTO) (*models.User,error)
 	LoginUser(payload *dto.LoginRequestDTO) (string,error)
 }
 type UserServiceImpl struct {
@@ -24,10 +24,14 @@ func NewUserService(_userRepository db.UserRepository) UserService{
 		userRepository:_userRepository,
 	}
 }
-func (u *UserServiceImpl) GetUserByID() error{
-	fmt.Println("creating user in userservice")
-	u.userRepository.GetByID()
-	return nil
+func (u *UserServiceImpl) GetUserByID(id int64) (*models.User,error){
+	fmt.Println("fetching user in userservice, id:",id)
+	user,err:=u.userRepository.GetByID(id)
+	if err!=nil{
+		fmt.Println("error fetching user in userservice",err)
+		return nil,err
+	}
+	return user,nil
 }
 func (u *UserServiceImpl) GetAllUsers() ([]*models.User,error){
 	fmt.Println("fetching all users in userservice")
@@ -47,20 +51,28 @@ func (u *UserServiceImpl) DeleteUserById(id int64) error{
 	}
 	return nil
 }
-func (u *UserServiceImpl) CreateUser() error{
+func (u *UserServiceImpl) CreateUser(payload *dto.SignupRequestDTO) (*models.User,error){
 	fmt.Println("creating user in userservice")
-	password:="password_example"
-	hashedPassword,err:=utils.HashPassword(password)
+	hashedPassword,err:=utils.HashPassword(payload.Password)
 	if err!=nil{
 		fmt.Println("error hashing password",err)
-		return err
+		return nil,err
 	}
-	u.userRepository.Create(
-		"username_example",
-		"user@example.com",
+	newId,err:=u.userRepository.Create(
+		payload.Username,
+		payload.Email,
 		hashedPassword,
 	)
-	return nil
+	if err!=nil{
+		fmt.Println("error creating user in userservice",err)
+		return nil,err
+	}
+	user,err:=u.userRepository.GetByID(newId)
+	if err!=nil{
+		fmt.Println("error fetching newly created user in userservice",err)
+		return nil,err
+	}
+	return user,nil
 }
 func (u *UserServiceImpl) LoginUser(payload *dto.LoginRequestDTO) (string,error){
 	email:=payload.Email
@@ -72,13 +84,11 @@ user, err := u.userRepository.GetByEmail(email)
 		return "", err
 	}
 
-	// Step 2. If user exists, or not. If not exists, return error
 	if user == nil {
 		fmt.Println("No user found with the given email")
 		return "", fmt.Errorf("no user found with email: %s", email)
 	}
 
-	// Step 3. If user exists, check the password using utils.CheckPasswordHash
 	isPasswordValid := utils.CheckPasswordHash(password, user.Password)
 
 	if !isPasswordValid {
@@ -86,7 +96,6 @@ user, err := u.userRepository.GetByEmail(email)
 		return "", nil
 	}
 
-	// Step 4. If password matches, print a JWT token, else return error saying password does not match
 	jwtPayload := jwt.MapClaims{
 		"email": user.Email,
 		"id":    user.Id,

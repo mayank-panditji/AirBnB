@@ -6,8 +6,8 @@ import (
 	"Authingo/models"
 )
 type UserRepository interface{
-		GetByID() (*models.User,error) 
-		Create(username string,email string,hashedPassword string) error
+		GetByID(id int64) (*models.User,error) 
+		Create(username string,email string,hashedPassword string) (int64,error)
 		GetAll() ([]*models.User,error)
 		DeleteById(id int64) error
 		GetByEmail(email string) (*models.User,error)
@@ -72,37 +72,42 @@ func(u *UsserRepositoryImpl) DeleteById(id int64) error{
 	fmt.Println("user deleted succesfully, rows affected:",rowsaffected)
 	return nil
 }
-func(u *UsserRepositoryImpl) Create(username string,email string,hashedPassword string) error{
+func(u *UsserRepositoryImpl) Create(username string,email string,hashedPassword string) (int64,error){
 	query:="INSERT INTO users(username,email,password) VALUES(?,?,?)"
 	result,err:=u.db.Exec(query,username,email,hashedPassword)
 	if err!=nil{
 		fmt.Println("error creating user",err)
-		return err
+		return 0,err
 	}
 	rowsaffected,rowerr:=result.RowsAffected()
 	if rowerr!=nil{
 		fmt.Println("error getting rows affected",rowerr)
-		return rowerr
+		return 0,rowerr
 	}
 	if rowsaffected==0{
 		fmt.Println("no rows affected,user are not created")
-		return nil
+		return 0,fmt.Errorf("user was not created")
 	}
-	fmt.Println("user created succesfully rows affected",rowsaffected)
-	return nil
+	newId,idErr:=result.LastInsertId()
+	if idErr!=nil{
+		fmt.Println("error getting last insert id",idErr)
+		return 0,idErr
+	}
+	fmt.Println("user created succesfully, id:",newId)
+	return newId,nil
 }
-func(u *UsserRepositoryImpl) GetByID () (*models.User,error) {
-	fmt.Println("fetching user in UserRepository")
+func(u *UsserRepositoryImpl) GetByID (id int64) (*models.User,error) {
+	fmt.Println("fetching user in UserRepository, id:",id)
 	//prepare quesy
 	query:="SELECT id,username,email,password,created_at,updated_at FROM users WHERE id=?"
 //wexecute query
-	row:=u.db.QueryRow(query,1)
+	row:=u.db.QueryRow(query,id)
 	//process the result
 	user:=&models.User{}
 	err:=row.Scan(&user.Id,&user.Username,&user.Email,&user.Password,&user.CreatedAt,&user.UpdatedAt)
 	if err!=nil{
 		if err==sql.ErrNoRows{
-			fmt.Println("user not found")
+			fmt.Println("user not found, id:",id)
 			return nil,err
 		}else{
 			fmt.Println("error scanning user",err)
