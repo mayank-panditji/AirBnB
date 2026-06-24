@@ -39,13 +39,19 @@ func (app *Application) Run() error{
 	if err!=nil{
 		fmt.Println("Error setting up database",err)
 	}
-	ur:=repo.NewUserRepository(db)
-	us:=services.NewUserService(ur)
-	uc:=controllers.NewUserController(us)
-	uRouter:=router.NewUserRouter(uc)
+		ur := repo.NewUserRepository(db)
+	rr := repo.NewRoleRepository(db)
+	rpr := repo.NewRolePermissionRepository(db)
+	urr := repo.NewUserRoleRepository(db)
+	us := services.NewUserService(ur)
+	rs := services.NewRoleService(rr, rpr, urr)
+	uc := controllers.NewUserController(us)
+	rc := controllers.NewRoleController(rs)
+	uRouter := router.NewUserRouter(uc)
+	rRouter := router.NewRoleRouter(rc)
 	server:=&http.Server{
 			Addr:app.Config.Addr,
-			Handler:router.SetupRouter(uRouter), //TODO setup a chi router and put it here
+			Handler:router.SetupRouter(uRouter,rRouter), //TODO setup a chi router and put it here
 			ReadTimeout: 10*time.Second,
 			WriteTimeout: 10*time.Second,
 	}
