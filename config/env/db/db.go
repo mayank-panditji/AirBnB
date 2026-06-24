@@ -2,7 +2,6 @@ package config
 
 import (
 	env "Authingo/config/env"
-	
 	"database/sql"
 	"fmt"
 	"github.com/go-sql-driver/mysql"
