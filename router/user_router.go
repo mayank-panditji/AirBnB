@@ -16,7 +16,7 @@ func NewUserRouter(_userController *controllers.UserController) Router{
 }
 func (ur *UserRouter) Register(r chi.Router){
 	
-	r.With(middlewares.JWTAuthMiddleware).Get("/users/{id}",ur.UserController.GetUserByID)
+	r.With(middlewares.JWTAuthMiddleware,middlewares.RequireAnyRole("users","admin")).Get("/users/{id}",ur.UserController.GetUserByID)
 	r.Get("/users",ur.UserController.GetAllUsers)
 	r.Delete("/users/{id}",ur.UserController.DeleteUserById)
 	

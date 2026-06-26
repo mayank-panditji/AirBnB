@@ -18,9 +18,6 @@ func SetupRouter(UserRouter Router, RoleRouter Router) *chi.Mux {
 	chirouter.Get("/ping", controllers.PingHandler)
 	chirouter.HandleFunc("/fakestoreservice/*", utils.ProxytoService("https://fakestoreapi.com", "/fakestoreservice/api"))
 
-	// for _, r := range routers {
-	// 	r.Register(chirouter)
-	// }
 	UserRouter.Register(chirouter)
 	RoleRouter.Register(chirouter)
 
