@@ -26,7 +26,7 @@ export async function generateRooms(jobData: RoomGenerationJob) {
     throw new BadRequestError(`Start date is in the past`);
   }
 
-  const totaldays=Math.ceil(endDate.getTime()-startDate.getTime()/(1000*60*60*24));
+  const totaldays=Math.ceil((endDate.getTime()-startDate.getTime())/(1000*60*60*24));
   
 logger.info(`Generating rooms for room category  for ${totaldays} days`);
 
@@ -52,6 +52,7 @@ logger.info(`Generating rooms for room category  for ${totaldays} days`);
 
 }
 // use a better query to get a better roooms
+//here n+1 problem generate
 export async function processDateBatch(roomCategory:RoomCategory,startDate:Date,endDate:Date,priceOverride?:number){
   let roomsCreated=0;
   let datesProcessed=0;
