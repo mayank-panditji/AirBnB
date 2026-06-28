@@ -1,7 +1,7 @@
 Steps to setup the starter template
 
 Clone the project
-git clone https://github.com/singhsanket143/Express-Typescript-Starter-Project.git <ProjectName>
+git clone https://github.com/mayank-panditji/Hotelservice.git <ProjectName>
 Move in to the folder structure
 cd <ProjectName>
 Install npm dependencies
